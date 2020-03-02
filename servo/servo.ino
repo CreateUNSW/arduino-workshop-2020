@@ -1,7 +1,9 @@
 #include <Servo.h>
 
+Servo servo;
+
 void setup() {
-  Servo servo;
+  
   servo.attach(7);
 }
 
@@ -10,7 +12,7 @@ void loop() {
     servo.write(i);       
     delay(20);           
   }
-  for (pos = 180; pos >= 0; pos -= 1) { 
+  for (int i = 180; i >= 0; i -= 1) { 
     servo.write(i);         
     delay(20);
   }
